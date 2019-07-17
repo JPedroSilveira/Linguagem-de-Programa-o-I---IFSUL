@@ -1,0 +1,18 @@
+<?php
+    function get_price($procurar){ //Função para pesquisar e retornar o preço do produto
+        $livros = array(  //Lista de produtos
+            "java" => 299,
+            "c" => 343,
+            "php" => 223
+        );
+        $price=NULL;
+        foreach($livros as $livro=>$preco){ //Passa pelo array até encontrar o livro pesquisado
+            if($livro == $procurar)
+            {
+                $price=$preco;
+                break;
+            }
+        }
+		return $price; //Retorna o $preco que caso não tenha sido modificado ficará como Null
+    }
+?>
